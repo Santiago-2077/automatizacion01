@@ -5,13 +5,14 @@ body {
     display: flex;
     justify-content: center;
     padding: 50px;
+    box-sizing: border-box;
 }
 
 .todo-container {
-    background: #fff;
+    background: #c4e9b0;
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
 }
@@ -19,7 +20,7 @@ body {
 h2 {
     color: #2c3e50;
     text-align: center;
-    border-bottom: 2px solid #3498db;
+    border-bottom: 2px solid #49a510;
     padding-bottom: 10px;
 }
 
@@ -38,7 +39,7 @@ input {
 
 #add-btn {
     padding: 10px;
-    background: #3498db;
+    background: #176138;
     color: white;
     border: none;
     border-radius: 0 4px 4px 0;
@@ -70,4 +71,36 @@ li:last-child {
     font-weight: bold;
     border: none;
     background: none;
+}
+
+/* Responsive para móviles */
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+        align-items: flex-start;
+    }
+
+    .todo-container {
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    input {
+        font-size: 16px;
+        /* evita zoom automático en iOS */
+    }
+
+    #add-btn {
+        padding: 10px 14px;
+    }
+
+    li {
+        padding: 12px 8px;
+        font-size: 15px;
+    }
+
+    .delete-btn {
+        font-size: 18px;
+        padding: 4px 8px;
+    }
 }
